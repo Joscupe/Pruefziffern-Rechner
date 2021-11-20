@@ -10,6 +10,7 @@ namespace IBAN_Rechner
 
         public static void Main(string[] args)
         {
+            Console.Title = "Prüffziffern Rechner";
             string[] ABC_E2 /* Ersetzen (für ISIN) */ = { "1 0", "1 1", "1 2", "1 3", "1 4", "1 5", "1 6", "1 7", "1 8", "1 9", "2 0", "2 1", "2 2", "2 3", "2 4", "2 5", "2 6", "2 7", "2 8", "2 9", "3 0", "3 1", "3 2", "3 3", "3 4", "3 5" };
             string[] ABC_E /* Ersetzen */ = { "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35" };
             string[] ABC = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
@@ -70,6 +71,7 @@ namespace IBAN_Rechner
             }
             else if( Format_I == 18281123) //ISBN
             {
+                Console.Title = "ISBN Rechner";
                 Console.WriteLine("Geben Sie bitte die ISBN an, im Format:");
                 Console.WriteLine("Y Y Y Y Y Y Y Y Y Y Y Y Y");
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -102,6 +104,7 @@ namespace IBAN_Rechner
             }
             else if (Format_I == 18281823) //ISIN
             {
+                Console.Title = "ISIN Rechner";
                 Console.WriteLine("Geben Sie bitte die ISIN an, im Format:");
                 Console.WriteLine("X X Y Y Y Y Y Y Y Y Y Y");
                 Console.ForegroundColor = ConsoleColor.Blue;
@@ -141,6 +144,7 @@ namespace IBAN_Rechner
             }
             else if (Format_I == 141023) //EAN
             {
+                Console.Title = "EAN Rechner";
                 Console.WriteLine("Geben Sie bitte die EAN an, im Format:");
                 Console.WriteLine("Y Y Y Y Y Y Y Y Y Y Y Y Y");
                 Console.ForegroundColor = ConsoleColor.Blue;

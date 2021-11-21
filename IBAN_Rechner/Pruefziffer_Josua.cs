@@ -7,6 +7,11 @@ namespace IBAN_Rechner
 
         public static void Main(string[] args)
         {
+
+
+            
+
+
             bool fenster = true; //für mehrfaches eingeben von Werten/ Überprüfungen
             while (fenster == true)
             {

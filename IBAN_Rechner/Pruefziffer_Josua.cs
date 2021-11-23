@@ -34,7 +34,7 @@ namespace IBAN_Rechner
                     Format = Format.Replace(ABC[i], ABC_E[i]);
                 }
                 int Format_I /* Format Int */ = int.Parse(Format);
-                /* Credits: Joscupe */
+                /* Credits: @Joscupe & @JanSirProXx*/
                 IBAN iban = new IBAN();
                 ISBN isbn = new ISBN();
                 ISIN isin = new ISIN();

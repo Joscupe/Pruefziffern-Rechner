@@ -27,41 +27,47 @@ namespace IBAN_Rechner
                 Console.WriteLine("Welches Format möchten sie überprüfen?");
                 Console.WriteLine("IBAN, ISBN, ISIN oder EAN?");
                 Console.ForegroundColor = ConsoleColor.Blue;
-                string Format = Console.ReadLine();
+                string? Format = Console.ReadLine();
                 Console.ForegroundColor = ConsoleColor.White;
-                for (int i = 0; i < ABC.Length; i++)
+                if (Format != null)
                 {
-                    Format = Format.Replace(ABC[i], ABC_E[i]);
-                }
-                int Format_I /* Format Int */ = int.Parse(Format);
-                /* Credits: @Joscupe & @JanSirProXx*/
-                IBAN iban = new IBAN();
-                ISBN isbn = new ISBN();
-                ISIN isin = new ISIN();
-                EAN ean = new EAN();
-                if (Format_I == 18111023) //IBAN
-                {
-                    iban.IBAN_M();
-                    
+                    for (int i = 0; i < ABC.Length; i++)
+                    {
+                        Format = Format.Replace(ABC[i], ABC_E[i]);
+                    }
+                    int Format_I /* Format Int */ = int.Parse(Format);
+                    /* Credits: @Joscupe & @JanSirProXx*/
+                    IBAN iban = new IBAN();
+                    ISBN isbn = new ISBN();
+                    ISIN isin = new ISIN();
+                    EAN ean = new EAN();
+                    if (Format_I == 18111023) //IBAN
+                    {
+                        iban.IBAN_M();
 
-                }
-                else if (Format_I == 18281123) //ISBN
+
+                    }
+                    else if (Format_I == 18281123) //ISBN
+                    {
+                        isbn.ISBN_M();
+                    } /* Credits Joscupe */
+                    else if (Format_I == 18281823) //ISIN
+                    {
+                        isin.ISIN_M();
+                    }
+                    else if (Format_I == 141023) //EAN
+                    {
+                        ean.EAN_M();
+                    }
+                    Console.WriteLine("Möchten Sie noch eine Überprüfung durchführen? (y/n)");
+                    string? wiederholung = Console.ReadLine();
+                    if (wiederholung != "y")
+                    {
+                        fenster = false;
+                    }
+                } else
                 {
-                    isbn.ISBN_M();
-                } /* Credits Joscupe */
-                else if (Format_I == 18281823) //ISIN
-                {
-                   isin.ISIN_M();
-                }
-                else if (Format_I == 141023) //EAN
-                {
-                    ean.EAN_M();
-                }
-                Console.WriteLine("Möchten Sie noch eine Überprüfung durchführen? (y/n)");
-                string wiederholung = Console.ReadLine();
-                if (wiederholung != "y")
-                {
-                    fenster = false;
+                    Console.WriteLine("Geben Sie bitte einen Wert ein");
                 }
             }
         }

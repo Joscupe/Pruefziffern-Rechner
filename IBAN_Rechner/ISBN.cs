@@ -19,7 +19,7 @@ namespace ISBN_C
             Console.WriteLine("Geben Sie bitte die ISBN an, im Format:");
             Console.WriteLine("Y Y Y Y Y Y Y Y Y Y Y Y Y");
             Console.ForegroundColor = ConsoleColor.Blue;
-            string ISBN = Console.ReadLine();
+            string? ISBN = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.White;
             string[] ISBN_S = ISBN.Split(' ');
             int ISBN_P = int.Parse(ISBN_S[12]);

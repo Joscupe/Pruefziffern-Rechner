@@ -19,7 +19,7 @@ namespace EAN_C
             Console.WriteLine("Geben Sie bitte die EAN an, im Format:");
             Console.WriteLine("Y Y Y Y Y Y Y Y Y Y Y Y Y");
             Console.ForegroundColor = ConsoleColor.Blue;
-            string EAN = Console.ReadLine();
+            string? EAN = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.White;
             string[] EAN_S = EAN.Split(' ');
             int EAN_P = int.Parse(EAN_S[12]);

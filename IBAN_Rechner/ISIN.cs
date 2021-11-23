@@ -19,7 +19,7 @@ namespace ISIN_C
             Console.WriteLine("Geben Sie bitte die ISIN an, im Format:");
             Console.WriteLine("X X Y Y Y Y Y Y Y Y Y Y");
             Console.ForegroundColor = ConsoleColor.Blue;
-            string ISIN = Console.ReadLine();
+            string? ISIN = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.White;
             for (int i = 0; i < ABC.Length; i++)
             {

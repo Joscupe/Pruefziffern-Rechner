@@ -20,7 +20,7 @@ namespace IBAN_C
             Console.WriteLine("Geben Sie bitte die IBAN ein, im Format von:");
             Console.WriteLine("XX YY YYYY YYYY YYYY YYYY Y");
             Console.ForegroundColor = ConsoleColor.Blue;
-            string IBAN = Console.ReadLine();
+            string? IBAN = Console.ReadLine();
             Console.ForegroundColor = ConsoleColor.White;
             string[] IBAN_S = IBAN.Split(' '); //IBAN gesplitet
             int IBAN_P /* Prüfziffer */ = int.Parse(IBAN_S[1]);
